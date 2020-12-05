@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Task Timeline</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="contact.css">
+    <!-- <link rel="stylesheet" href="flipcard.css"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="wrap">
+
+            <div class="arrow animated bounce"></div>
+
+            <header>
+                <div class="logo"></div>
+                <nav>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="transparent">
+                <div class="headline"></div>
+                <div class="text"></div>
+                <div class="text"></div>
+                <div class="button"></div>
+            </section>
+
+
+            <section class="contentbox">
+                <div class='signup-container'>
+                    <div class='left-container'>
+                        <div class='puppy'>
+                            <img src='unnamed.gif'>
+                        </div>
+                    </div>
+                    <div class='right-container'>
+                        <header>
+                            <h1>Registration</h1>
+                            <div class='set'>
+                                <div class='pets-name'>
+                                    <label for='pets-name'>First Name</label>
+                                    <input id='pets-name' placeholder="first name" type='text'>
+                                </div>
+                                <div class='pets-photo'>
+                                    <button id='pets-upload'>
+                                                        <i class="fas fa-camera-retro"></i>
+                                                </button>
+                                    <label for='pets-upload'>Upload a photo</label>
+                                </div>
+                            </div>
+                            <div class='set'>
+                                <div class='pets-breed'>
+                                    <label for='pets-breed'>Last Name</label>
+                                    <input id='pets-breed' placeholder="last name" type='text'>
+                                </div>
+                                <div class='pets-birthday'>
+                                    <label for='pets-birthday'>Birthday</label>
+                                    <input type="date" id="start" name="trip-start" value='MM/DD/YYYY' min="2020-01-01" max="2020-12-31" placeholder='MM/DD/YYYY'>
+                                </div>
+                            </div>
+                            <div class='set'>
+                                <div class='pets-gender'>
+                                    <label for='pet-gender-female'>Gender</label>
+                                    <div class='radio-container'>
+                                        <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'>
+                                        <label for='pet-gender-female'>Female</label>
+                                        <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
+                                        <label for='pet-gender-male'>Male</label>
+                                    </div>
+                                </div>
+                                <div class='pets-spayed-neutered'>
+                                    <label for='pet-spayed'>Other Account</label>
+                                    <div class='radio-container'>
+                                        <input checked='' id='pet-spayed' name='spayed-neutered' type='radio' value='spayed'>
+                                        <label for='pet-spayed'>Yes</label>
+                                        <input id='pet-neutered' name='spayed-neutered' type='radio' value='neutered'>
+                                        <label for='pet-neutered'>No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='set'>
+                                <div class='pets-breed'>
+                                    <label for='pets-breed'>Email</label>
+                                    <input id='email' placeholder="exampla@company.com" type='email'>
+                                </div>
+                                <div class='pets-birthday'>
+                                    <label for='pets-birthday'>Phone number</label>
+                                    <input id='phone' placeholder='+33' type='tel' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                </div>
+                            </div>
+
+                            <div class='set'>
+                                <div class='pets-breed'>
+                                    <label for='pets-breed'>Password</label>
+                                    <input type="password" id="pass" name="password" minlength="8" required>
+                                </div>
+                                <div class='pets-breed'>
+                                    <label for='pets-breed'>Repeat Password</label>
+                                    <input type="password" id="pass" name="password" minlength="8" required>
+                                </div>
+                            </div>
+
+
+                            <div class='pets-weight'>
+                                <label for='pet-weight-0-25'>Select Role</label>
+                                <div class='radio-container'>
+                                    <input checked='' id='pet-weight-0-25' name='pet-weight' type='radio' value='0-25'>
+                                    <label for='pet-weight-0-25'>Intern</label>
+                                    <input id='pet-weight-25-50' name='pet-weight' type='radio' value='25-50'>
+                                    <label for='pet-weight-25-50'>Developer</label>
+                                    <input id='pet-weight-50-100' name='pet-weight' type='radio' value='50-100'>
+                                    <label for='pet-weight-50-100'>Manager</label>
+                                    <input id='pet-weight-100-plus' name='pet-weight' type='radio' value='100+'>
+                                    <label for='pet-weight-100-plus'>Other</label>
+                                </div>
+                            </div>
+                        </header>
+                        <footer>
+                            <div class='set'>
+                                <button id='back'>Back</button>
+                                <button id='next'>Next          
+                                                <i class="fas fa-arrow-right"></i> 
+                                            </button>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="contentbox">
+                <h1>Contact Us</h1>
+                <form class="cf">
+                    <div class="half left cf">
+                        <input type="text" id="input-name" placeholder="Name">
+                        <input type="email" id="input-email" placeholder="Email address">
+                        <input type="text" id="input-subject" placeholder="Subject">
+                    </div>
+                    <div class="half right cf">
+                        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" id="input-submit">
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer ">
+        <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+
+        </ul>
+        <p>Coded with <i class="fas fa-heart"></i> by Benkira</p>
+    </footer>
+
+</body>
+
+</html>
