@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="survey.css">
+</head>
+
+<body>
+    <div class="pop-up-survey">
+        <form id="survey-space">
+
+
+            <h1>We'd like to ask you a few questions</h1>
+
+            <p>So if you are willing to corporate, please hit the starting button and answer the questions</p>
+            <div class="center-text">
+                <p class="button next" onclick="renderQuestion(0)">Start the survey</p>
+            </div>
+        </form>
+        <div id="process-space">
+            <h2>One last step</h2>
+            <form id="final-answers">
+                <!-- <div class="g-recaptcha" data-sitekey="6LcKCQ8UAAAAAMqMkWjGqJc5n9uHqE-EH6hvw_Ka" id="gRecapture"></div> -->
+                <div class="captchaContainer">
+                    <div class="captchaWrapper">
+                        <button type="button" class="captchaBox boxHover">
+                        </button>
+                    </div>
+                    <input type="checkbox" name="hiddenCaptcha" id="hiddenCaptcha" disabled="disabled" />
+                    <label for="hiddenCaptcha" class="captchaLabel">I'm not a robot</label>
+                </div>
+                <div class="right-text">
+                    <p class="button next" onclick="submitForm()">Finish<span class="error-message">Please click the checkbox above to prove you're not a robot</span></p>
+                </div>
+            </form>
+        </div>
+        <div id="thank-you-space">
+            <h2>Thank you</h2>
+        </div>
+    </div>
+
+    <script src="survey.js"></script>
+
+</body>
+
+
+</html>

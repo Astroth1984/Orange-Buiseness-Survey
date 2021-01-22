@@ -8,6 +8,10 @@
     --text-radius: 50em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr1);
     padding: 50px 0 0 0;
@@ -97,7 +101,7 @@ header nav ul li {
 
 section {
     background: var(--clr2);
-    padding: 100px 50px;
+    padding: 40px 50px;
     width: 100%;
     border-radius: var(--border-radius);
     position: relative;
@@ -110,8 +114,11 @@ section .headline {
     list-style: none;
     max-width: 260px;
     height: 30px;
-    background: var(--clr1);
-    border-radius: var(--text-radius);
+    padding-bottom: 2px;
+}
+
+section .headline .img {
+    margin-top: 10;
 }
 
 section .text {
@@ -144,38 +151,6 @@ section.contentbox .text {
 
 section.contentbox .button {
     margin: 10px 0 !important;
-}
-
-section.cards {
-    padding: 0px;
-    background: transparent;
-    display: table;
-}
-
-section.cards .card {
-    background: var(--clr2);
-    width: calc(33.6% - 10px);
-    margin: 0 5px;
-    border-radius: var(--border-radius);
-    display: inline-block;
-}
-
-section.cards .card:first-child {
-    margin: 0 5px 0 0;
-}
-
-section.cards .card:last-child {
-    margin: 0 0 0 5px;
-}
-
-section.cards .card .content {
-    padding: 40px;
-}
-
-section.cards .card img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 }
 
 footer {
@@ -378,4 +353,231 @@ body.tight .wrapper {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 265ms ease-in;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    margin: 1em;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease;
+    transform: translateX(0%);
+}
+
+.nav-links a:hover {
+    color: rgb(15, 15, 15);
+    letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 760px) {
+    nav {
+        justify-content: space-between;
+        padding: 5 5vw;
+    }
+    .nav-links {
+        position: relative;
+        right: 0;
+        top: 8vh;
+        min-height: 92vh;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        transform: translateX(100%);
+        transition: All 0.5s ease-in;
+    }
+    .nav-links a {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 460px) {
+    .nav-links {
+        width: 100%;
+        transition: All 0.5s ease;
+    }
+}
+
+.nav-active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/**/
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', helvetica;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: -1em;
+}
+
+.container h1 {
+    position: relative;
+}
+
+.container h1::before,
+.container h1::after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 2px;
+    margin: auto 0;
+    top: 5px;
+    bottom: 0;
+}
+
+.container h1::before {
+    left: 50%;
+    animation: leftSlide 1.3s cubic-bezier(0.68, -0.55, 0.265, 1.5) forwards;
+}
+
+.container h1::after {
+    animation: rightSlide 1.3s cubic-bezier(0.68, -0.55, 0.265, 1.5) forwards;
+}
+
+.container h1 span {
+    letter-spacing: 3px;
+    font-weight: 300;
+    display: inline-block;
+    opacity: 0;
+    text-transform: uppercase;
+    animation-iteration-count: 1;
+    animation: fadeIn forwards 1s ease-out;
+}
+
+.container h1 span:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+.container h1 span:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.container h1 span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.container h1 span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.container h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.container h1 span:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.container h1 span:nth-child(7) {
+    animation-delay: 0.5s;
+}
+
+.container h1 span:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+.container h1 span:nth-child(9) {
+    animation-delay: 0.7s;
+}
+
+.container h1 span:nth-child(10) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes leftSlide {
+    0% {
+        opacity: 0;
+        left: 50%;
+        height: 5%;
+    }
+    100% {
+        opacity: 1;
+        left: -6%;
+        height: 75%;
+    }
+}
+
+@keyframes rightSlide {
+    0% {
+        opacity: 0;
+        right: 50%;
+        height: 5%;
+    }
+    100% {
+        opacity: 1;
+        right: -6%;
+        height: 75%;
+    }
+}
+
+
+/* --------------- Survey CSS --------------------*/
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
